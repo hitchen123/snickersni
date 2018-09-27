@@ -7,7 +7,6 @@ $(document).ready(function () {
     t585_init('68064250');
     t396_init('67491311');
     t396_init('68193808');
-
     t354_checkPosition('67655771');
 
     $(window).bind('scroll', t_throttle(function () {
@@ -38,6 +37,7 @@ $(document).ready(function () {
     } catch (err) {
     }
 
+
     function t_animateInputs(recid) {
         var el = $('#rec' + recid);
         var inputs = el.find('.t-input:not(.t-inputquantity)');
@@ -65,26 +65,6 @@ $(document).ready(function () {
         }
     }
 
-    if (!window.mainTracker) {
-        window.mainTracker = 'tilda';
-    }
-    (function (d, w, k, o, g) {
-        var n = d.getElementsByTagName(o)[0], s = d.createElement(o), f = function () {
-            n.parentNode.insertBefore(s, n);
-        };
-        s.type = "text/javascript";
-        s.async = true;
-        s.key = k;
-        s.id = "tildastatscript";
-        s.src = g;
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-            f();
-        }
-    })(document, window, '09ff36b8c024b1d9e127398824112623', 'script', 'https://stat.tildacdn.com/js/tildastat-0.2.min.js');
-
-
 
     // плавный скрол телефон десктоп
     $('.tn-elem__673781171537443163225').click(function () {
@@ -95,9 +75,5 @@ $(document).ready(function () {
         e.preventDefault();
         $('html, body').animate({scrollTop: $('#rec67770113').offset().top}, 1000);
     });
-
-
-
-
 
 });
